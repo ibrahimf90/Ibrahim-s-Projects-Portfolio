@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Premium HTML/CSS Knowledge Quiz by Ibrahim Fayyad"
+    />
+    <title>Interactive Knowledge Quiz</title>
+    <link rel="stylesheet" href="html-css-quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <header class="glass-header">
+      <div class="header-content">
+        <h1>HTML/CSS Mastery Quiz</h1>
+        <nav>
+          <ul>
+            <li><a href="#student-info">Info</a></li>
+            <li><a href="#html-questions">HTML</a></li>
+            <li><a href="#css-questions">CSS</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="../../index.html" class="back-btn">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        Back to Projects Hub
+      </a>
+    </header>
+
+    <main class="glass-container">
+      <form method="post" action="mailto:ibrahimfayyad17@gmail.com">
+        <!-- Student Info -->
+        <section
+          role="region"
+          aria-labelledby="student-info"
+          class="quiz-section"
+        >
+          <h2 id="student-info">Student Profile</h2>
+          <div class="input-group">
+            <div class="input-field">
+              <input
+                type="text"
+                name="student-name"
+                id="student-name"
+                placeholder=" "
+                required
+              />
+              <label for="student-name">Full Name</label>
+            </div>
+            <div class="input-field">
+              <input
+                type="email"
+                name="student-email"
+                id="student-email"
+                placeholder=" "
+                required
+              />
+              <label for="student-email">Email Address</label>
+            </div>
+            <div class="input-field">
+              <input type="date" name="birth-date" id="birth-date" required />
+              <label for="birth-date" class="date-label">Date of Birth</label>
+            </div>
+          </div>
+        </section>
+
+        <!-- HTML Questions -->
+        <section
+          role="region"
+          aria-labelledby="html-questions"
+          class="quiz-section"
+        >
+          <h2 id="html-questions">HTML Fundamentals</h2>
+
+          <div class="question-block">
+            <h3>Question 1</h3>
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                The legend element represents a caption for the content of its
+                parent fieldset element.
+              </legend>
+              <div class="radio-group">
+                <label for="q1-a1" class="radio-label">
+                  <input
+                    type="radio"
+                    id="q1-a1"
+                    name="q1"
+                    value="true"
+                    required
+                  />
+                  <span class="custom-radio"></span>
+                  True
+                </label>
+                <label for="q1-a2" class="radio-label">
+                  <input
+                    type="radio"
+                    id="q1-a2"
+                    name="q1"
+                    value="false"
+                    required
+                  />
+                  <span class="custom-radio"></span>
+                  False
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="question-block">
+            <h3>Question 2</h3>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                A label element nesting an input element is required to have a
+                for attribute with the same value as the input's id.
+              </legend>
+              <div class="radio-group">
+                <label for="q2-a1" class="radio-label">
+                  <input
+                    type="radio"
+                    id="q2-a1"
+                    name="q2"
+                    value="true"
+                    required
+                  />
+                  <span class="custom-radio"></span>
+                  True
+                </label>
+                <label for="q2-a2" class="radio-label">
+                  <input
+                    type="radio"
+                    id="q2-a2"
+                    name="q2"
+                    value="false"
+                    required
+                  />
+                  <span class="custom-radio"></span>
+                  False
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- CSS Questions -->
+        <section
+          role="region"
+          aria-labelledby="css-questions"
+          class="quiz-section"
+        >
+          <h2 id="css-questions">CSS Styling</h2>
+
+          <div class="question-block">
+            <label for="selector" class="select-label"
+              >Can the CSS margin property accept negative values?</label
+            >
+            <div class="select-wrapper">
+              <select name="selector" id="selector" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="question-block">
+            <label for="css-textarea" class="textarea-label"
+              >Do you have any questions or feedback?</label
+            >
+            <textarea
+              id="css-textarea"
+              name="css-questions"
+              rows="4"
+              placeholder="Share your thoughts here..."
+            ></textarea>
+          </div>
+        </section>
+
+        <button type="submit" class="submit-btn">
+          <span>Submit Quiz</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m22 2-7 20-4-9-9-4Z" />
+            <path d="M22 2 11 13" />
+          </svg>
+        </button>
+      </form>
+    </main>
+
+    <footer class="glass-footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Ibrahim Fayyad. Designed & Developed with passion.</p>
+        <div class="footer-links">
+          <a
+            href="https://github.com/ibrahimf90"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="github-link"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub Profile
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

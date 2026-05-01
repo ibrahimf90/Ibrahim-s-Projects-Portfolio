@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled To-Do List</title>
+    <!-- Include premium glassmorphic theme and background -->
+    <link rel="stylesheet" href="../../index.css" />
+    <!-- Specific styles for the to-do list elements -->
+    <link rel="stylesheet" href="styledtodolist.css" />
+  </head>
+
+  <body>
+    <div class="background-animation"></div>
+    <header class="main-header">
+      <div class="header-content">
+        <h1>Learning Roadmap</h1>
+        <p>Track your to-do progress and explore the resources</p>
+      </div>
+    </header>
+
+    <div class="glass-container">
+      <main>
+
+        <ul class="todo-list">
+          <li class="todo-item">
+            <input type="checkbox" id="html" class="custom-checkbox" />
+            <label for="html" class="todo-label">
+              <span class="checkbox-visual"></span>
+              <span class="todo-text">Start Learning HTML</span>
+            </label>
+            <div class="sub-item">
+              <a
+                class="sub-item-link"
+                href="https://www.w3schools.com/html/default.asp"
+                target="_blank"
+                >View Resource</a
+              >
+            </div>
+          </li>
+
+          <li class="todo-item">
+            <input type="checkbox" id="css" class="custom-checkbox" />
+            <label for="css" class="todo-label">
+              <span class="checkbox-visual"></span>
+              <span class="todo-text">Start Learning CSS</span>
+            </label>
+            <div class="sub-item">
+              <a
+                class="sub-item-link"
+                href="https://www.w3schools.com/css/default.asp"
+                target="_blank"
+                >View Resource</a
+              >
+            </div>
+          </li>
+
+          <li class="todo-item">
+            <input type="checkbox" id="js" class="custom-checkbox" />
+            <label for="js" class="todo-label">
+              <span class="checkbox-visual"></span>
+              <span class="todo-text">Start Learning JavaScript</span>
+            </label>
+            <div class="sub-item">
+              <a
+                class="sub-item-link"
+                href="https://www.w3schools.com/js/default.asp"
+                target="_blank"
+                >View Resource</a
+              >
+            </div>
+          </li>
+
+          <li class="todo-item">
+            <input type="checkbox" id="php" class="custom-checkbox" />
+            <label for="php" class="todo-label">
+              <span class="checkbox-visual"></span>
+              <span class="todo-text">Start Learning PHP</span>
+            </label>
+            <div class="sub-item">
+              <a
+                class="sub-item-link"
+                href="https://www.w3schools.com/php/default.asp"
+                target="_blank"
+                >View Resource</a
+              >
+            </div>
+          </li>
+        </ul>
+
+        <div style="margin-top: 2.5rem; display: flex; justify-content: center">
+          <a href="../../index.html" class="github-link">
+            <svg fill="currentColor" viewBox="0 0 24 24" width="22" height="22">
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+            Back to Projects Hub
+          </a>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

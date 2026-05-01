@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance Sheet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="balance-sheet.css" />
+</head>
+
+<body>
+    <div class="background-animation"></div>
+    <nav class="top-nav">
+        <a href="../../index.html" class="back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Projects Hub
+        </a>
+    </nav>
+    <main class="glass-container">
+        <section>
+            <h1>
+                <span class="flex">
+                    <span>AcmeWidgetCorp</span>
+                    <span>Balance Sheet</span>
+                </span>
+            </h1>
+            <div id="years" aria-hidden="true">
+                <span class="year">2024</span>
+                <span class="year">2025</span>
+                <span class="year">2026</span>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <caption>
+                        Assets
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th><span class="sr-only year">2024</span></th>
+                            <th><span class="sr-only year">2025</span></th>
+                            <th class="current"><span class="sr-only year">2026</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="data">
+                            <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
+                            <td>$25</td>
+                            <td>$30</td>
+                            <td class="current">$28</td>
+                        </tr>
+                        <tr class="data">
+                            <th>Checking <span class="description">Our primary transactional account.</span></th>
+                            <td>$54</td>
+                            <td>$56</td>
+                            <td class="current">$53</td>
+                        </tr>
+                        <tr class="data">
+                            <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
+                            <td>$500</td>
+                            <td>$650</td>
+                            <td class="current">$728</td>
+                        </tr>
+                        <tr class="total">
+                            <th>Total <span class="sr-only">Assets</span></th>
+                            <td>$579</td>
+                            <td>$736</td>
+                            <td class="current">$809</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>
+                        Liabilities
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th><span class="sr-only">2024</span></th>
+                            <th><span class="sr-only">2025</span></th>
+                            <th><span class="sr-only">2026</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="data">
+                            <th>Loans <span class="description">The outstanding balance on our startup loan.</span></th>
+                            <td>$500</td>
+                            <td>$250</td>
+                            <td class="current">$0</td>
+                        </tr>
+                        <tr class="data">
+                            <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span>
+                            </th>
+                            <td>$200</td>
+                            <td>$300</td>
+                            <td class="current">$400</td>
+                        </tr>
+                        <tr class="data">
+                            <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
+                            <td>$50</td>
+                            <td>$50</td>
+                            <td class="current">$75</td>
+                        </tr>
+                        <tr class="total">
+                            <th>Total <span class="sr-only">Liabilities</span></th>
+                            <td>$750</td>
+                            <td>$600</td>
+                            <td class="current">$475</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <caption>
+                        Net Worth
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th><span class="sr-only">2024</span></th>
+                            <th><span class="sr-only">2025</span></th>
+                            <th><span class="sr-only">2026</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="total">
+                            <th>Total <span class="sr-only">Net Worth</span></th>
+                            <td>$-171</td>
+                            <td>$136</td>
+                            <td class="current">$334</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ibrahim Fayyad. Designed & Developed with passion.</p>
+        <div class="footer-links">
+            <a href="https://github.com/ibrahimf90" target="_blank" rel="noopener noreferrer" class="github-link">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub Profile
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+/* Color Variables */
+:root {
+  --primary: #2563eb; /* Tailwind Blue 600 */
+  --primary-hover: #1d4ed8; /* Tailwind Blue 700 */
+  --secondary: #0f172a; /* Tailwind Slate 900 */
+  --text-dark: #1e293b;
+  --text-light: #f8fafc;
+  --text-muted: #64748b;
+  --bg-gradient-start: #0f172a;
+  --bg-gradient-end: #1e293b;
+  --glass-bg: rgba(255, 255, 255, 0.05); /* very subtle white on dark */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --card-bg-light: rgba(255, 255, 255, 0.85); /* Frosty white */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-end)
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative;
+}
+
+/* Background Animated Blobs */
+.blob {
+  position: absolute;
+  filter: blur(80px);
+  z-index: 1;
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: #3b82f6; /* Blue */
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  bottom: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: #8b5cf6; /* Purple */
+  animation-delay: -3s;
+}
+
+.blob-3 {
+  bottom: 20%;
+  left: 30%;
+  width: 300px;
+  height: 300px;
+  background: #0ea5e9; /* Sky */
+  animation-delay: -5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(30px) scale(1.1);
+  }
+}
+
+/* Card Container */
+.card-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: var(--card-bg-light);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Header & Profile */
+.card-header {
+  height: 120px;
+  background: linear-gradient(135deg, var(--primary), #8b5cf6);
+  position: relative;
+}
+
+.profile-frame {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Card Body */
+.card-body {
+  padding: 60px 40px 40px; /* Top padding to account for avatar */
+  text-align: center;
+}
+
+.full-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+}
+
+.designation {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.contact-item:hover {
+  background: white;
+  border-color: rgba(37, 99, 235, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item i {
+  color: var(--primary);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.highlight-btn {
+  background: var(--primary);
+  color: white;
+  justify-content: center;
+  margin-top: 5px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.highlight-btn:hover {
+  background: var(--primary-hover);
+  color: white; /* keep white */
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
+}
+
+.highlight-btn i {
+  color: white;
+}
+
+/* Social Media Section */
+.social-media {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 25px;
+}
+
+.social-media span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  color: white;
+}
+
+.social-icon.facebook:hover {
+  background: #1877f2;
+  box-shadow: 0 8px 15px rgba(24, 119, 242, 0.3);
+}
+.social-icon.instagram:hover {
+  background: #e4405f;
+  box-shadow: 0 8px 15px rgba(228, 64, 95, 0.3);
+}
+.social-icon.github:hover {
+  background: #181717;
+  box-shadow: 0 8px 15px rgba(24, 23, 23, 0.3);
+}
+
+/* Animation for the whole card loading */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+.card-container {
+  animation: fadeInSlideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card-container {
+    padding: 15px;
+  }
+  .card-body {
+    padding: 60px 25px 30px;
+  }
+}
